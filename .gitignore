@@ -85,3 +85,6 @@ instance/
 # Ignore Python cache files
 *.pyc
 
+__pycache__
+__pycache__/database.cpython-314.pyc
+__pycache__/recommender.cpython-314.pyc
