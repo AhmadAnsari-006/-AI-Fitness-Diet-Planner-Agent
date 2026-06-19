@@ -1,0 +1,372 @@
+/* Core Theme & Typography Override */
+body {
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow-x: hidden;
+    background-color: var(--bs-body-bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Background Gradients */
+.glass-bg-blur {
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(13, 148, 136, 0.08) 0%, transparent 40%);
+    filter: blur(90px);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Glassmorphism Styles */
+.navbar-glass {
+    background: rgba(20, 27, 45, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="light"] .navbar-glass {
+    background: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.bg-dark-glass {
+    background: rgba(20, 27, 45, 0.65) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-bs-theme="light"] .bg-dark-glass {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+}
+
+.bg-dark-glass-intense {
+    background: rgba(10, 15, 28, 0.8) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-bs-theme="light"] .bg-dark-glass-intense {
+    background: rgba(245, 247, 250, 0.9) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.bg-glass-compact {
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+[data-bs-theme="light"] .bg-glass-compact {
+    background: rgba(0, 0, 0, 0.02) !important;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Custom Gradients */
+.text-gradient {
+    background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+[data-bs-theme="light"] .text-gradient {
+    background: linear-gradient(135deg, #1e293b 30%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.logo-icon {
+    background: linear-gradient(135deg, #6366f1, #0d9488);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Circular Confidence Ring */
+.radial-progress-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+
+.radial-progress-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.04);
+    stroke-width: 8;
+}
+
+[data-bs-theme="light"] .progress-ring-bg {
+    stroke: rgba(0, 0, 0, 0.04);
+}
+
+.progress-ring-fg {
+    fill: none;
+    stroke: #0d9488;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 251.2;
+    stroke-dashoffset: 0;
+    transition: stroke-dashoffset 1s ease-in-out;
+}
+
+.radial-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--bs-body-color);
+}
+
+/* Custom card borders */
+.border-left-primary {
+    border-left: 4px solid #6366f1 !important;
+}
+
+.border-white-10 {
+    border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-bs-theme="light"] .border-white-10 {
+    border-color: rgba(0, 0, 0, 0.08) !important;
+}
+
+.border-white-20 {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Form Steps */
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.step-title {
+    color: #0d9488;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 12px;
+}
+
+[data-bs-theme="light"] .step-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Stars Rating */
+.star-btn.fa-solid {
+    color: #f59e0b !important;
+}
+
+/* Round Buttons */
+.btn-glass-round {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.btn-glass-round:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Custom elements */
+.btn-accent {
+    background: linear-gradient(135deg, #0d9488, #0f766e);
+    color: white;
+    border: none;
+}
+
+.btn-accent:hover {
+    background: linear-gradient(135deg, #0f766e, #115e59);
+    color: white;
+    box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.icon-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.bg-primary-gradient {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.bg-secondary-gradient {
+    background: linear-gradient(135deg, #0d9488, #0f766e);
+}
+
+.bg-accent-gradient {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+/* Status Labels */
+.normal-status {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+}
+
+.warning-status {
+    background: rgba(249, 115, 22, 0.15);
+    color: #f97316;
+}
+
+.danger-status {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+.advisory-content p {
+    margin-bottom: 8px;
+}
+
+.advisory-content p.warning-note {
+    color: #f97316;
+}
+
+.advisory-content p.green-note {
+    color: #10b981;
+}
+
+/* Tab controls style overrides */
+.nav-tabs .nav-link {
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: rgba(99, 102, 241, 0.05) !important;
+    color: #6366f1 !important;
+    border-bottom: 2px solid #6366f1 !important;
+}
+
+[data-bs-theme="light"] .nav-tabs .nav-link.active {
+    background-color: rgba(99, 102, 241, 0.08) !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Light Mode Input Text Visibility Fixes */
+[data-bs-theme="light"] .form-control,
+[data-bs-theme="light"] .form-select,
+[data-bs-theme="light"] input[type="text"],
+[data-bs-theme="light"] input[type="email"],
+[data-bs-theme="light"] input[type="password"],
+[data-bs-theme="light"] input[type="number"],
+[data-bs-theme="light"] input[type="date"],
+[data-bs-theme="light"] textarea {
+    color: #1e293b !important;
+}
+
+[data-bs-theme="light"] .form-control::placeholder,
+[data-bs-theme="light"] .form-select::placeholder {
+    color: #64748b !important;
+}
+
+[data-bs-theme="light"] .input-group-text {
+    color: #475569 !important;
+}
+
+/* Light Mode General Text Visibility Fixes */
+[data-bs-theme="light"] .text-white {
+    color: #1e293b !important;
+}
+
+[data-bs-theme="light"] h1, 
+[data-bs-theme="light"] h2, 
+[data-bs-theme="light"] h3, 
+[data-bs-theme="light"] h4, 
+[data-bs-theme="light"] h5, 
+[data-bs-theme="light"] h6 {
+    color: #0f172a !important;
+}
+
+[data-bs-theme="light"] .card-header h2,
+[data-bs-theme="light"] .card-header h3,
+[data-bs-theme="light"] .card-header h4,
+[data-bs-theme="light"] .card-header h5 {
+    color: #0f172a !important;
+}
+
+[data-bs-theme="light"] strong {
+    color: #1e293b !important;
+}
+
+[data-bs-theme="light"] .icon-circle {
+    color: white !important;
+}
+
+/* Dark Mode Input Visibility Fixes */
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select,
+[data-bs-theme="dark"] input[type="text"],
+[data-bs-theme="dark"] input[type="email"],
+[data-bs-theme="dark"] input[type="number"],
+[data-bs-theme="dark"] input[type="date"],
+[data-bs-theme="dark"] textarea {
+    color: #e6eef8 !important;
+}
+
+[data-bs-theme="dark"] .form-control::placeholder,
+[data-bs-theme="dark"] .form-select::placeholder {
+    color: rgba(230,238,248,0.6) !important;
+}
+
+/* Ensure select dropdown options are readable across themes */
+.form-select option,
+select option {
+    color: #0f172a; /* dark text for option items (common default backgrounds are light) */
+}
+
+/* Prevent form input overlap: ensure controls have stacking context and minimum height */
+.form-control, .form-select {
+    position: relative;
+    z-index: 1;
+    min-height: 42px;
+}
+
+/* Green hover shade for bottom tab buttons (workout week nav) */
+#workoutWeekNav .btn:hover {
+    background-color: rgba(16,185,129,0.08) !important;
+    border-color: rgba(16,185,129,0.18) !important;
+    color: #10b981 !important;
+}
+
+/* Subtle green hover for other glass blocks inside tabs */
+.tab-content .bg-glass-compact:hover {
+    box-shadow: 0 8px 24px rgba(16,185,129,0.06);
+    border-color: rgba(16,185,129,0.12) !important;
+}

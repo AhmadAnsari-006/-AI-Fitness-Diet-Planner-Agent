@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}Aura Fit - AI Personal Coach & Diet Agent{% endblock %}
+
+{% block content %}
+<div class="row align-items-center py-5">
+    <div class="col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
+        <h1 class="display-3 fw-bold lh-sm mb-3 text-gradient">
+            A Smart AI Coach <br>That Keeps You Safe.
+        </h1>
+        <p class="lead text-secondary mb-4 pe-lg-4 fs-5">
+            Aura Fit is an intelligent health planner agent. It calculates your BMR & TDEE, structures a customized diet plan, and designs a weekly workout schedule that respects your joint physical constraints.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
+            <a href="{{ url_for('auth.signup') }}" class="btn btn-primary btn-lg rounded-pill px-5 shadow-lg"><i class="fa-solid fa-bolt"></i> Get Started Free</a>
+            <a href="{{ url_for('auth.login') }}" class="btn btn-secondary btn-lg rounded-pill px-4"><i class="fa-solid fa-circle-play"></i> Log In</a>
+        </div>
+    </div>
+    
+    <div class="col-lg-6">
+        <div class="hero-image-card p-4 rounded-4 bg-dark-glass border border-white-10 shadow-2xl relative overflow-hidden">
+            <div class="d-flex justify-content-between align-items-center mb-4 pb-2 border-bottom border-white-10">
+                <span class="badge bg-success bg-opacity-10 text-success border border-success border-opacity-30 rounded-pill px-3 py-1.5"><i class="fa-solid fa-shield-halved"></i> Safety-First Engine</span>
+                <span class="text-secondary small"><i class="fa-solid fa-microchip"></i> Aura Fit V1.0</span>
+            </div>
+            
+            <div class="row g-3 mb-4">
+                <div class="col-6">
+                    <div class="p-3 bg-glass-compact rounded-3 border border-white-10">
+                        <span class="d-block text-secondary small text-uppercase">Injury Filters</span>
+                        <strong class="text-white">Active Joint Substitution</strong>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 bg-glass-compact rounded-3 border border-white-10">
+                        <span class="d-block text-secondary small text-uppercase">Macro Optimizer</span>
+                        <strong class="text-white">Keto, Low Carb, High Protein</strong>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Graphic layout -->
+            <div class="p-3 bg-dark-glass-intense rounded-3 border border-white-10 d-flex align-items-center gap-3">
+                <i class="fa-solid fa-heart-pulse logo-icon text-indigo fs-1"></i>
+                <div>
+                    <h5 class="mb-1 text-white text-sm">Dynamic Adaptive Loop</h5>
+                    <p class="mb-0 text-secondary text-xs">Self-optimizes workout volumes based on daily performance logs & rating reviews.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 py-5 border-top border-white-10 mt-5">
+    <div class="col-md-4">
+        <div class="card bg-dark-glass p-4 border border-white-10 h-100 rounded-4">
+            <div class="icon-circle bg-primary-gradient mb-3 text-white"><i class="fa-solid fa-calculator"></i></div>
+            <h4>Physiological Engine</h4>
+            <p class="text-secondary text-sm mb-0">Computes BMI categories, Mifflin-St Jeor basal metabolic expenditures, and activity-level adjustments.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-dark-glass p-4 border border-white-10 h-100 rounded-4">
+            <div class="icon-circle bg-secondary-gradient mb-3 text-white"><i class="fa-solid fa-dumbbell"></i></div>
+            <h4>Injury Substitution</h4>
+            <p class="text-secondary text-sm mb-0">Replaces heavy squats or bench press exercises if knee or shoulder injuries are specified, replacing them with joint-safe alternates.</p>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-dark-glass p-4 border border-white-10 h-100 rounded-4">
+            <div class="icon-circle bg-accent-gradient mb-3 text-white"><i class="fa-solid fa-utensils"></i></div>
+            <h4>Allergen Control Diet</h4>
+            <p class="text-secondary text-sm mb-0">Removes food elements matching user-entered allergies, scaling meals to match target calorie needs.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
