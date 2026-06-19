@@ -47,6 +47,15 @@ Thumbs.db
 *.db
 *.sqlite3
 
+# More explicit DB and sqlite patterns
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.db-journal
+*.sqlite-journal
+app.db
+fitness_planner.db
+
 # Explicit DB files
 app.db
 fitness_planner.db
@@ -69,4 +78,10 @@ reports/test_results_private.md
 
 # Misc
 instance/
+
+# Ignore all __pycache__ folders anywhere
+**/__pycache__/
+
+# Ignore Python cache files
+*.pyc
 
